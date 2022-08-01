@@ -9,7 +9,7 @@ import java.util.Scanner;
 // TestCase
 // 7
 // 0 0 1 0 0 1 0
-// Should Return -> 4
+// 4 (return)
 public class JumpingOnTheClouds {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class JumpingOnTheClouds {
         int output = 0;
         System.out.println(c.toString());
 
-        // why step + 1?
+        // why step + 1 ?
         // cuz we dont need the value of array
         // but we need to count how many movement pointer from 1 array to another
         // like 1 -> 2 -> 3 => 2 movement pointer
@@ -47,5 +47,4 @@ public class JumpingOnTheClouds {
         }
         return output;
     }
-
 }
