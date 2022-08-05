@@ -1,1 +1,1 @@
-# My Programming Challenge in Java
+# My programming challenge in Java
