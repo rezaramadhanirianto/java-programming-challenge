@@ -1,11 +1,11 @@
-package programmingChallenge.medium;
+package programmingChallenge.medium.hastable;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-// https://leetcode.com/problems/vowel-spellchecker/submissions/
+// https://leetcode.com/problems/vowel-spellchecker/
 public class VowelSpellChecker {
     public String[] spellchecker(String[] wordlist, String[] queries) {
         Set<String> set = new HashSet(Arrays.asList(wordlist));
