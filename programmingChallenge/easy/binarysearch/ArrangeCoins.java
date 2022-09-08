@@ -1,5 +1,7 @@
 package programmingChallenge.easy.binarysearch;
 
+import java.util.Arrays;
+
 public class ArrangeCoins {
     // binary search approach
     public int arrangeCoins(int n) {
