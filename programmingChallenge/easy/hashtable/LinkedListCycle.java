@@ -1,6 +1,6 @@
 package programmingChallenge.easy.hashtable;
 
-import java.util.LinkedList;
+import programmingChallenge.utils.ListNode;
 
 // https://leetcode.com/problems/linked-list-cycle/
 public class LinkedListCycle {
@@ -13,14 +13,5 @@ public class LinkedListCycle {
             if(fast == slow) return true;
         }
         return false;
-    }
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
     }
 }
