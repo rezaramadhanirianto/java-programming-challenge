@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+// https://leetcode.com/problems/longest-string-chain/
 public class LongestStringChain {
+    // memoization
     public int longestStrChain(String[] words) {
         Arrays.sort(words, (a,b)-> a.length()-b.length());
         Map<String, Integer> map = new HashMap();
