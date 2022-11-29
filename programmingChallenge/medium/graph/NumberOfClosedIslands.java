@@ -36,7 +36,7 @@ public class NumberOfClosedIslands {
         // 1, 1, 1, 1, 1
         // 1, 1, 1, 0, 1
         // 1, 1, 1, 1, 1
-        // because the that will be 1 islands
+        // because that left is false right node not updated and it will be 1 islands
         // return dfs(grid,i+1,j) && dfs(grid,i-1,j) && dfs(grid,i,j+1) && dfs(grid,i,j-1);
     }
 }
