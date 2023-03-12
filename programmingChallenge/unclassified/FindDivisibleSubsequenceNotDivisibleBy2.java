@@ -1,8 +1,5 @@
 package programmingChallenge.unclassified;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Find all subsequence of length K from an array whose final sum of subsequence is not divisible by 2.
  *
