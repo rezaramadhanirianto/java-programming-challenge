@@ -1,4 +1,4 @@
-package programmingChallenge.medium.hastable;
+package programmingChallenge.medium.hashtable;
 
 import java.util.LinkedList;
 import java.util.List;
