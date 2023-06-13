@@ -28,4 +28,27 @@ public class FindAllAnagramInaString {
         }
         return res;
     }
+
+    public List<Integer> findAnagrams2(String s, String p) {
+        int[] count = new int[26];
+        int n = s.length(), m = p.length();
+        for(int c: p.toCharArray()) count[c-'a']++;
+
+        int[] curr = new int[26];
+        List<Integer> res = new ArrayList();
+        int j = 0;
+        for(int i = 0; i < n; i++){
+            curr[s.charAt(i) - 'a']++;
+            if(isValid(curr, count)) res.add(j);
+            if(i >= m-1) curr[s.charAt(j++) - 'a']--;
+        }
+        return res;
+    }
+
+    boolean isValid(int[] count, int[] chars){
+        for(int i =0; i < 26; i++) {
+            if(count[i] != chars[i]) return false;
+        }
+        return true;
+    }
 }
