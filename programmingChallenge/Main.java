@@ -1,4 +1,4 @@
-package programmingChallenge.utils;
+package programmingChallenge;
 
 public class Main {
     public static void main(String[] args){
