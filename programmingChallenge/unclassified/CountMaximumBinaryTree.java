@@ -1,5 +1,29 @@
 package programmingChallenge.unclassified;
 
+/**
+ * Given Binary tree, in it we call a perfect tree as when it has 0 or 2 childern for a node.
+ * Question: We need to return the maximum possible perfect subtree size ( i.e count of all nodes in a perfect subtree ) that can formed in a given binary tree by removing some nodes.
+ *
+ * Example:
+ *
+ * 		  18
+ *        /       \
+ *      15         30
+ *     /  \        /  \
+ *   40    50    100   40
+ *  /  \   /
+ * 8   7  9
+ *
+ *  	By removing node 9, we get the maximum possible perfect tree with size  is 9
+ *
+ * 		   18
+ *        /       \
+ *      15         30
+ *     /  \        /  \
+ *   40    50    100   40
+ *  /  \
+ * 8   7
+ * */
 public class CountMaximumBinaryTree {
     static int res = 0;
     static int solution(TreeNode node){
