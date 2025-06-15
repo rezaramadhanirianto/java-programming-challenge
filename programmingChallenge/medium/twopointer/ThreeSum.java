@@ -92,4 +92,26 @@ public class ThreeSum {
         }
         return list;
     }
+
+    public List<List<Integer>> threeSum3(int[] nums) {
+        Map<Integer, Integer> map = new HashMap();
+        Set<List<Integer>> res = new HashSet();
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length; i++){
+            for(int j = i+1; j < nums.length; j++){
+                int sum = nums[i] + nums[j];
+                sum *= -1;
+                if(map.containsKey(sum)){
+                    List<Integer> list = new ArrayList();
+                    list.add(nums[i]);
+                    list.add(nums[j]);
+                    list.add(sum);
+                    res.add(list);
+                }
+            }
+            map.put(nums[i], i);
+        }
+
+        return new ArrayList(res);
+    }
 }

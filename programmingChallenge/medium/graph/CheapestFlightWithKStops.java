@@ -69,4 +69,31 @@ public class CheapestFlightWithKStops {
         return -1;
     }
 
+    // O (N*M)
+    public int findCheapestPrice3(int n, int[][] flights, int src, int dst, int k) {
+        List<int[]>[] graph = new ArrayList[n];
+        for(int i = 0; i < n; i++) graph[i] = new ArrayList();
+
+        for(int[] flight: flights){
+            graph[flight[0]].add(new int[]{flight[1], flight[2]});
+        }
+
+        return helper(graph, new Integer[k+2][n], src, dst, k+1);
+    }
+
+    int helper(List<int[]>[] graph, Integer[][] dp, int src, int dest, int k){
+        if(k < 0) return -1;
+        else if(src == dest) return 0;
+        else if(dp[k][src] != null) return dp[k][src];
+
+        int min = Integer.MAX_VALUE;
+        for(int[] next: graph[src]){
+            int res = helper(graph, dp, next[0], dest, k-1);
+
+            if(res != -1) min = Math.min(min, res + next[1]);
+        }
+
+        return dp[k][src] = (min == Integer.MAX_VALUE) ? -1 : min;
+    }
+
 }
