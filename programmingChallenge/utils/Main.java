@@ -10,11 +10,7 @@ public class Main {
     static List<String> list2 = new ArrayList();
 
     public static void main(String[] args){
-        recursion(10, "");
-        recursion2(10, "");
-        for(int i = 0; i < list1.size(); i++){
-            if(!list1.get(i).equals(list2.get(i))) System.out.println("ERROR: " + list1.get(i) + " " + list2.get(i));
-        }
+        System.out.println("test");
     }
 
     static int recursion(int i, String key){
